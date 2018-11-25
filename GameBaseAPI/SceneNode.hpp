@@ -11,6 +11,8 @@
 #include <stdexcept>
 #include <vector>
 
+#include "Command.hpp"
+
 class SceneNode : public sf::Drawable, public sf::Transformable, private sf::NonCopyable {
 public:
 	typedef typename std::unique_ptr<SceneNode> Ptr;
@@ -38,6 +40,16 @@ public:
 		updateChildren(delta);
 	};
 
+	void onCommand(const Command& cmd, sf::Time delta) {
+		if (cmd.category & getCategory())
+			cmd.action(*this, delta);
+
+		for (const Ptr& child : mChildrenList)
+			child->onCommand(cmd, delta);
+	};
+	unsigned int getCategory() const { return mCategory; };
+	void setCategory(unsigned int cat) { mCategory = cat; };
+
 private:
 	virtual void updateThis(const sf::Time &delta) {
 	};
@@ -62,6 +74,8 @@ private:
 private:
 	std::vector<Ptr> mChildrenList;
 	SceneNode* mParent;
+
+	unsigned int mCategory;
 };
 
 #endif
