@@ -128,7 +128,12 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AnimatedSprite.hpp" />
+    <ClInclude Include="AnimatedSpriteNode.hpp" />
+    <ClInclude Include="Animation.hpp" />
     <ClInclude Include="ResourceHolder.hpp" />
+    <ClInclude Include="SceneNode.hpp" />
+    <ClInclude Include="SpriteNode.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

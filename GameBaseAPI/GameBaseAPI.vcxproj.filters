@@ -13,6 +13,15 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\Resources">
+      <UniqueIdentifier>{4562522b-54c3-4b2b-9ad4-fe43defa0967}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Nodes">
+      <UniqueIdentifier>{ebdd2eb1-79ce-4afd-b755-f7151d57cca8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Animation">
+      <UniqueIdentifier>{423eb203-99a3-4011-9d60-f590a6b78dba}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -21,7 +30,22 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ResourceHolder.hpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers d%27en-tête\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneNode.hpp">
+      <Filter>Fichiers d%27en-tête\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteNode.hpp">
+      <Filter>Fichiers d%27en-tête\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimatedSprite.hpp">
+      <Filter>Fichiers d%27en-tête\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation.hpp">
+      <Filter>Fichiers d%27en-tête\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimatedSpriteNode.hpp">
+      <Filter>Fichiers d%27en-tête\Nodes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
